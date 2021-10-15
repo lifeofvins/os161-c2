@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "hello.h": "c",
+        "clock.h": "c",
+        "unistd.h": "c",
+        "autoconf.h": "c"
+    }
+}
