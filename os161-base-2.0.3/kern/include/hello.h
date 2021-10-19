@@ -4,6 +4,8 @@
 #include "opt-hello.h"
 #if OPT_HELLO
 
+typedef struct data_s data_t, *pdata_t;
+
 void hello(void);
 
 #endif
