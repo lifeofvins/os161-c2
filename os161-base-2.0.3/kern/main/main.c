@@ -49,9 +49,10 @@
 #include <syscall.h>
 #include <test.h>
 #include <version.h>
-#include <hello.h>
+#include <file_syscalls.h>
 #include "autoconf.h"  // for pseudoconfig
 
+#define	TEST 0
 
 /*
  * These two pieces of data are maintained by the makefiles and build system.
@@ -214,6 +215,21 @@ kmain(char *arguments)
 
 	#if OPT_HELLO
 	hello();
+	#endif
+
+	char text[9];
+	char buffer[18];
+	int ret_sw, ret_sr;
+	strcpy(text, "ci\0ao!");
+
+	#ifdef TEST
+	ret_sw = sys_write(text, 7);
+	kprintf("\nsys_write() returns %d - expected = 2\n",ret_sw);
+
+	buffer[17] = '\0';
+	ret_sr = sys_read(buffer, 17);
+	kprintf("Read from input: %s", buffer);
+	kprintf("\nsys_read() returns %d - expected = 17\n",ret_sr);
 	#endif
 
 	menu(arguments);

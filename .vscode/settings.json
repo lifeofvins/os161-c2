@@ -4,6 +4,19 @@
         "clock.h": "c",
         "unistd.h": "c",
         "autoconf.h": "c",
-        "opt-hello.h": "c"
+        "opt-hello.h": "c",
+        "lib.h": "c",
+        "test.h": "c",
+        "syscall.h": "c",
+        "copyinout.h": "c",
+        "addrspace.h": "c",
+        "vnode.h": "c",
+        "elf.h": "c",
+        "errno.h": "c",
+        "unistd_64.h": "c",
+        "file_syscalls.h": "c",
+        "console.h": "c",
+        "size_t.h": "c",
+        "types.h": "c"
     }
 }
